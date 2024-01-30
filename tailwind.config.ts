@@ -59,8 +59,8 @@ const config: Config = {
       typography: (theme: PluginAPI['theme']) => {
         // This could come from ThemeConfig['fontSize'] maybe?
         type FontSize = [string, { lineHeight: string; fontWeight: string; letterSpacing: string }]
-        //docsmill.dev/npm/tailwindcss@3.4.1#/.Config.ThemeConfig
-        https: function generateHeadingStyles(fontSize: FontSize) {
+
+        function generateHeadingStyles(fontSize: FontSize) {
           return {
             fontSize: fontSize[0],
             lineHeight: fontSize[1].lineHeight,
