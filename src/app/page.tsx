@@ -17,7 +17,7 @@ export default function Home() {
 
       <main className="mt-12">
         <h1 className="mb-4">Typography plugin (prose) font sizes</h1>
-        <section className="prose max-w-none">
+        <section className="prose prose-synced">
           <hgroup>
             <h1>This is a h1 prose heading</h1>
             <h2>This is a h2 prose heading</h2>

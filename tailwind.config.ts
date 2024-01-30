@@ -56,32 +56,32 @@ const config: Config = {
           },
         ],
       },
-      typography: (theme: PluginAPI['theme']) => {
-        // This could come from ThemeConfig['fontSize'] maybe?
-        type FontSize = [string, { lineHeight: string; fontWeight: string; letterSpacing: string }]
+      // typography: (theme: PluginAPI['theme']) => {
+      //   // This could come from ThemeConfig['fontSize'] maybe?
+      //   type FontSize = [string, { lineHeight: string; fontWeight: string; letterSpacing: string }]
 
-        function generateHeadingStyles(fontSize: FontSize) {
-          return {
-            fontSize: fontSize[0],
-            lineHeight: fontSize[1].lineHeight,
-            fontWeight: fontSize[1].fontWeight,
-            letterSpacing: fontSize[1].letterSpacing,
-          }
-        }
-        return {
-          DEFAULT: {
-            css: {
-              '--tw-prose-headings': theme('colors.black'),
-              h1: generateHeadingStyles(theme('fontSize.5xl')),
-              h2: generateHeadingStyles(theme('fontSize.4xl')),
-              h3: generateHeadingStyles(theme('fontSize.3xl')),
-              h4: generateHeadingStyles(theme('fontSize.2xl')),
-              h5: { color: theme('colors.black'), ...generateHeadingStyles(theme('fontSize.xl')) },
-              h6: { color: theme('colors.black'), ...generateHeadingStyles(theme('fontSize.lg')) },
-            },
-          },
-        }
-      },
+      //   function generateHeadingStyles(fontSize: FontSize) {
+      //     return {
+      //       fontSize: fontSize[0],
+      //       lineHeight: fontSize[1].lineHeight,
+      //       fontWeight: fontSize[1].fontWeight,
+      //       letterSpacing: fontSize[1].letterSpacing,
+      //     }
+      //   }
+      //   return {
+      //     DEFAULT: {
+      //       css: {
+      //         '--tw-prose-headings': theme('colors.black'),
+      //         h1: generateHeadingStyles(theme('fontSize.5xl')),
+      //         h2: generateHeadingStyles(theme('fontSize.4xl')),
+      //         h3: generateHeadingStyles(theme('fontSize.3xl')),
+      //         h4: generateHeadingStyles(theme('fontSize.2xl')),
+      //         h5: { color: theme('colors.black'), ...generateHeadingStyles(theme('fontSize.xl')) },
+      //         h6: { color: theme('colors.black'), ...generateHeadingStyles(theme('fontSize.lg')) },
+      //       },
+      //     },
+      //   }
+      // },
     },
   },
   plugins: [typographyPlugin],
